@@ -300,6 +300,104 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CONTACT */}
+        <section className="bg-white py-20 text-zinc-950">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+              <div>
+                <p className="font-bold uppercase tracking-[0.2em] text-yellow-600">
+                  Atendimento
+                </p>
+
+                <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+                  Precisou de um eletricista?
+                </h2>
+
+                <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-600">
+                  A RSD Soluções Elétricas atende clientes no Tatuapé e região.
+                  Entre em contato para explicar o que você precisa e solicitar um
+                  orçamento.
+                </p>
+
+                <div className="mt-8 space-y-5">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-400">
+                      <MapPin size={22} />
+                    </div>
+
+                    <div>
+                      <p className="font-bold">Área de atendimento</p>
+                      <p className="text-zinc-600">Tatuapé e região — São Paulo/SP</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-400">
+                      <Phone size={22} />
+                    </div>
+
+                    <div>
+                      <p className="font-bold">Telefone / WhatsApp</p>
+                      <a
+                        href="tel:+5511990091953"
+                        className="text-zinc-600 transition hover:text-zinc-950"
+                      >
+                        (11) 99009-1953
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href={`https://wa.me/5511990091953?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-zinc-950 px-7 py-4 font-bold text-white transition hover:-translate-y-0.5 hover:bg-zinc-800"
+                >
+                  <MessageCircle size={20} />
+                  Falar pelo WhatsApp
+                </a>
+              </div>
+
+              <div className="relative overflow-hidden rounded-[2rem] bg-zinc-950 p-8 text-white shadow-2xl">
+                <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-yellow-400/10 blur-3xl" />
+
+                <div className="relative">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-zinc-950">
+                    <Zap size={30} fill="currentColor" />
+                  </div>
+
+                  <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-yellow-400">
+                    RSD Soluções Elétricas
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-black">
+                    Segurança e cuidado em cada serviço.
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-zinc-400">
+                    Entre em contato e conte o que você precisa. A RSD poderá avaliar
+                    sua necessidade e orientar sobre o serviço adequado.
+                  </p>
+
+                  <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 text-zinc-950">
+                      <Phone size={18} />
+                    </div>
+
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-zinc-500">
+                        Fale agora
+                      </p>
+                      <p className="font-bold">(11) 99009-1953</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       {/* CTA */}
       <section className="bg-yellow-400 py-16 text-zinc-950">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
