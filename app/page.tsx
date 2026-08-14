@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   Zap,
   Wrench,
@@ -12,6 +14,7 @@ import {
   Gauge,
   MapPinned,
 } from "lucide-react";
+
 
 const services = [
   {
@@ -110,42 +113,36 @@ export default function Home() {
             </div>
           </div>
 
-          {/* HERO CARD */}
-          <div className="relative">
-            <div className="relative mx-auto max-w-md rounded-3xl border border-white/10 bg-zinc-900 p-2 shadow-2xl shadow-black/40">
-              <div className="rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-950 p-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-3xl text-zinc-950">
-                  ⚡
-                </div>
+        {/* HERO IMAGE */}
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-[2rem] bg-yellow-400/10 blur-3xl" />
 
-                <p className="mt-10 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">
-                  RSD Soluções Elétricas
-                </p>
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-2xl shadow-black/50">
+                <Image
+                  src="/images/rubens-eletricista.jpg"
+                  alt="Rubens da RSD Soluções Elétricas"
+                  width={800}
+                  height={800}
+                  priority
+                  className="h-auto w-full object-cover"
+                />
 
-                <h2 className="mt-3 text-3xl font-bold">
-                  Seu projeto em boas mãos.
-                </h2>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent p-6 pt-24">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">
+                    RSD Soluções Elétricas
+                  </p>
 
-                <div className="mt-8 space-y-4">
-                  {[
-                    "Atendimento profissional",
-                    "Orçamento personalizado",
-                    "Foco em segurança",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-center gap-3 text-zinc-300"
-                    >
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-yellow-400/15 text-sm text-yellow-400">
-                        ✓
-                      </span>
-                      {item}
-                    </div>
-                  ))}
+                  <p className="mt-1 text-lg font-bold text-white">
+                    Rubens de Souza Dias
+                  </p>
+
+                  <div className="mt-3 flex items-center gap-2 text-sm text-zinc-300">
+                    <MapPin size={16} className="text-yellow-400" />
+                    Tatuapé, São Paulo - SP
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
